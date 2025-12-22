@@ -1,6 +1,8 @@
 import { MapPin, Phone } from "lucide-react";
 import { toast } from "sonner";
 
+
+
 const branches = [
   {
     name: "Head Office - Mumbai",
@@ -39,29 +41,58 @@ const branches = [
 
 const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+  const form = e.currentTarget;
+  const originalFormData = new FormData(form);
 
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
+  try {
+    const keys = [
+      "08018da7-e177-4b08-9d40-19954d84a1e5",
+      "44e0b0fb-14c4-4dda-87a5-2119b1d71092",
+    ];
+
+    const requests = keys.map(async (key) => {
+      const data = new FormData();
+
+      // copy form fields
+      originalFormData.forEach((value, name) => {
+        data.append(name, value.toString());
       });
 
-      const result = await response.json();
+      // REQUIRED by Web3Forms
+      data.append("access_key", key);
+      data.append("subject", "New Contact Form Submission");
+      data.append("from_name", "Multi Transways Website");
 
-      if (result.success) {
-        toast.success("Thank you for contacting us! We'll get back to you soon.");
-        form.reset(); // ✅ Auto reset
-      } else {
-        toast.error("Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      toast.error("Network error. Please try again later.");
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+
+      return res.json(); // IMPORTANT
+    });
+
+    const results = await Promise.all(requests);
+
+    const allSuccessful = results.every(
+      (result) => result.success === true
+    );
+
+    if (allSuccessful) {
+      toast.success("Thank you for contacting us! We'll get back to you soon.");
+      form.reset();
+    } else {
+      console.error("Web3Forms error:", results);
+      toast.error("Something went wrong. Please try again.");
     }
-  };
+  } catch (error) {
+    console.error("Network error:", error);
+    toast.error("Network error. Please try again later.");
+  }
+};
+
+
 
   return (
     <section id="contact" className="py-20 bg-background">
@@ -87,11 +118,7 @@ const ContactSection = () => {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Web3Forms Key */}
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="08018da7-e177-4b08-9d40-19954d84a1e5"
-                />
+                
 
                 <input
                   type="text"
