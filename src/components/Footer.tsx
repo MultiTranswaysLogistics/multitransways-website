@@ -37,14 +37,18 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
                 <a
-                  href="&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x6D;&#x75;&#x6C;&#x74;&#x69;&#x74;&#x72;&#x61;&#x6E;&#x73;&#x77;&#x61;&#x79;&#x73;&#x2E;&#x63;&#x6F;&#x6D;"
+                  href="&#x68;&#x74;&#x74;&#x70;&#x73;&#x3A;&#x2F;&#x2F;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x67;&#x6F;&#x6F;&#x67;&#x6C;&#x65;&#x2E;&#x63;&#x6F;&#x6D;&#x2F;&#x6D;&#x61;&#x69;&#x6C;&#x2F;&#x3F;&#x76;&#x69;&#x65;&#x77;&#x3D;&#x63;&#x6D;&#x26;&#x66;&#x73;&#x3D;&#x31;&#x26;&#x74;&#x6F;&#x3D;&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x6D;&#x75;&#x6C;&#x74;&#x69;&#x74;&#x72;&#x61;&#x6E;&#x73;&#x77;&#x61;&#x79;&#x73;&#x2E;&#x63;&#x6F;&#x6D;"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-background/90 hover:text-primary transition-colors"
                 >
                   info@multitransways.com
                 </a>
                 /
                 <a
-                  href="&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x61;&#x6D;&#x69;&#x74;&#x62;&#x61;&#x72;&#x70;&#x6C;&#x40;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;"
+                  href="&#x68;&#x74;&#x74;&#x70;&#x73;&#x3A;&#x2F;&#x2F;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x67;&#x6F;&#x6F;&#x67;&#x6C;&#x65;&#x2E;&#x63;&#x6F;&#x6D;&#x2F;&#x6D;&#x61;&#x69;&#x6C;&#x2F;&#x3F;&#x76;&#x69;&#x65;&#x77;&#x3D;&#x63;&#x6D;&#x26;&#x66;&#x73;&#x3D;&#x31;&#x26;&#x74;&#x6F;&#x3D;&#x61;&#x6D;&#x69;&#x74;&#x62;&#x61;&#x72;&#x70;&#x6C;&#x40;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-background/90 hover:text-primary transition-colors"
                 >
                   amitbarpl@mail.com

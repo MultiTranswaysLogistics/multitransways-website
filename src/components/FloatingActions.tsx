@@ -73,14 +73,14 @@ const FloatingActions = () => {
 
         {/* EMAIL BUTTON */}
         <a
-          href="mailto:info@multitransways.com?cc=amitbarpl@mail.com"
-          className="w-14 h-14 rounded-full bg-foreground text-background shadow-lg
-                     flex items-center justify-center
-                     transition-transform duration-150
-                     active:scale-95 motion-reduce:transition-none"
-        >
-          <Mail className="w-6 h-6" />
-        </a>
+  href="&#x68;&#x74;&#x74;&#x70;&#x73;&#x3A;&#x2F;&#x2F;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x67;&#x6F;&#x6F;&#x67;&#x6C;&#x65;&#x2E;&#x63;&#x6F;&#x6D;&#x2F;&#x6D;&#x61;&#x69;&#x6C;&#x2F;&#x3F;&#x76;&#x69;&#x65;&#x77;&#x3D;&#x63;&#x6D;&#x26;&#x66;&#x73;&#x3D;&#x31;&#x26;&#x74;&#x6F;&#x3D;&#x69;&#x6E;&#x66;&#x6F;&#x40;&#x6D;&#x75;&#x6C;&#x74;&#x69;&#x74;&#x72;&#x61;&#x6E;&#x73;&#x77;&#x61;&#x79;&#x73;&#x2E;&#x63;&#x6F;&#x6D;&#x26;&#x63;&#x63;&#x3D;&#x61;&#x6D;&#x69;&#x74;&#x62;&#x61;&#x72;&#x70;&#x6C;&#x40;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-14 h-14 rounded-full bg-foreground text-background shadow-xl flex items-center justify-center hover:scale-110 transition-transform"
+>
+  <Mail className="w-6 h-6" />
+</a>
+
       </div>
 
       {/* PHONE POPUP */}
